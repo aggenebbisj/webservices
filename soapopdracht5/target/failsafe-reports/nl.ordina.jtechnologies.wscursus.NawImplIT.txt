@@ -1,0 +1,93 @@
+-------------------------------------------------------------------------------
+Test set: nl.ordina.jtechnologies.wscursus.NawImplIT
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.265 sec <<< FAILURE!
+create(nl.ordina.jtechnologies.wscursus.NawImplIT)  Time elapsed: 0.132 sec  <<< ERROR!
+javax.xml.ws.WebServiceException: Failed to access the WSDL at: http://localhost:8080/opdracht4/NawService?wsdl. It failed with: 
+	Got http://localhost:8080/opdracht4/NawService?wsdl while opening stream from http://localhost:8080/opdracht4/NawService?wsdl.
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1613)
+	at java.net.URL.openStream(URL.java:1037)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.createReader(RuntimeWSDLParser.java:827)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.resolveWSDL(RuntimeWSDLParser.java:283)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:140)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:120)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.parseWSDL(WSServiceDelegate.java:260)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:223)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:171)
+	at com.sun.xml.internal.ws.spi.ProviderImpl.createServiceDelegate(ProviderImpl.java:96)
+	at javax.xml.ws.Service.<init>(Service.java:77)
+	at javax.xml.ws.Service.create(Service.java:707)
+	at nl.ordina.jtechnologies.wscursus.NawImplIT.doCreate(NawImplIT.java:79)
+	at nl.ordina.jtechnologies.wscursus.NawImplIT.create(NawImplIT.java:74)
+
+delete(nl.ordina.jtechnologies.wscursus.NawImplIT)  Time elapsed: 0.007 sec  <<< ERROR!
+javax.xml.ws.WebServiceException: Failed to access the WSDL at: http://localhost:8080/opdracht4/NawService?wsdl. It failed with: 
+	Got http://localhost:8080/opdracht4/NawService?wsdl while opening stream from http://localhost:8080/opdracht4/NawService?wsdl.
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1613)
+	at java.net.URL.openStream(URL.java:1037)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.createReader(RuntimeWSDLParser.java:827)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.resolveWSDL(RuntimeWSDLParser.java:283)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:140)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:120)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.parseWSDL(WSServiceDelegate.java:260)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:223)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:171)
+	at com.sun.xml.internal.ws.spi.ProviderImpl.createServiceDelegate(ProviderImpl.java:96)
+	at javax.xml.ws.Service.<init>(Service.java:77)
+	at javax.xml.ws.Service.create(Service.java:707)
+	at nl.ordina.jtechnologies.wscursus.NawImplIT.doCreate(NawImplIT.java:79)
+	at nl.ordina.jtechnologies.wscursus.NawImplIT.delete(NawImplIT.java:199)
+
+update(nl.ordina.jtechnologies.wscursus.NawImplIT)  Time elapsed: 0.007 sec  <<< ERROR!
+javax.xml.ws.WebServiceException: Failed to access the WSDL at: http://localhost:8080/opdracht4/NawService?wsdl. It failed with: 
+	Got http://localhost:8080/opdracht4/NawService?wsdl while opening stream from http://localhost:8080/opdracht4/NawService?wsdl.
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1613)
+	at java.net.URL.openStream(URL.java:1037)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.createReader(RuntimeWSDLParser.java:827)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.resolveWSDL(RuntimeWSDLParser.java:283)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:140)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:120)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.parseWSDL(WSServiceDelegate.java:260)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:223)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:171)
+	at com.sun.xml.internal.ws.spi.ProviderImpl.createServiceDelegate(ProviderImpl.java:96)
+	at javax.xml.ws.Service.<init>(Service.java:77)
+	at javax.xml.ws.Service.create(Service.java:707)
+	at nl.ordina.jtechnologies.wscursus.NawImplIT.doCreate(NawImplIT.java:79)
+	at nl.ordina.jtechnologies.wscursus.NawImplIT.update(NawImplIT.java:241)
+
+read(nl.ordina.jtechnologies.wscursus.NawImplIT)  Time elapsed: 0.011 sec  <<< ERROR!
+javax.xml.ws.WebServiceException: Failed to access the WSDL at: http://localhost:8080/opdracht4/NawService?wsdl. It failed with: 
+	Got http://localhost:8080/opdracht4/NawService?wsdl while opening stream from http://localhost:8080/opdracht4/NawService?wsdl.
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1613)
+	at java.net.URL.openStream(URL.java:1037)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.createReader(RuntimeWSDLParser.java:827)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.resolveWSDL(RuntimeWSDLParser.java:283)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:140)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:120)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.parseWSDL(WSServiceDelegate.java:260)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:223)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:171)
+	at com.sun.xml.internal.ws.spi.ProviderImpl.createServiceDelegate(ProviderImpl.java:96)
+	at javax.xml.ws.Service.<init>(Service.java:77)
+	at javax.xml.ws.Service.create(Service.java:707)
+	at nl.ordina.jtechnologies.wscursus.NawImplIT.doCreate(NawImplIT.java:79)
+	at nl.ordina.jtechnologies.wscursus.NawImplIT.read(NawImplIT.java:145)
+
+create_duplicates_not_allowed(nl.ordina.jtechnologies.wscursus.NawImplIT)  Time elapsed: 0.01 sec  <<< ERROR!
+javax.xml.ws.WebServiceException: Failed to access the WSDL at: http://localhost:8080/opdracht4/NawService?wsdl. It failed with: 
+	Got http://localhost:8080/opdracht4/NawService?wsdl while opening stream from http://localhost:8080/opdracht4/NawService?wsdl.
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1613)
+	at java.net.URL.openStream(URL.java:1037)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.createReader(RuntimeWSDLParser.java:827)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.resolveWSDL(RuntimeWSDLParser.java:283)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:140)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:120)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.parseWSDL(WSServiceDelegate.java:260)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:223)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:171)
+	at com.sun.xml.internal.ws.spi.ProviderImpl.createServiceDelegate(ProviderImpl.java:96)
+	at javax.xml.ws.Service.<init>(Service.java:77)
+	at javax.xml.ws.Service.create(Service.java:707)
+	at nl.ordina.jtechnologies.wscursus.NawImplIT.create_duplicates_not_allowed(NawImplIT.java:108)
+

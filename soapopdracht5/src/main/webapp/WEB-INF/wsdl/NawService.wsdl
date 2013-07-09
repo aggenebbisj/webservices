@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions 
+	targetNamespace="http://wsdl.soap.wscursus.jtechnologies.ordina.nl/"
+	name="NawService" 
+	xmlns:tns="http://wsdl.soap.wscursus.jtechnologies.ordina.nl/"
+	xmlns:c="http://soap.wscursus.jtechnologies.ordina.nl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns="http://schemas.xmlsoap.org/wsdl/">
+	
+	<documentation>
+		wsimport -keep -verbose -Xnocompile -s java/
+		webapp/WEB-INF/wsdl/NawService.wsdl -wsdllocation
+		WEB-INF/wsdl/NawService.wsdl
+	</documentation>
+	<types>
+		<xsd:schema>
+			<xsd:import namespace="http://soap.wscursus.jtechnologies.ordina.nl/"
+				schemaLocation="naw.xsd" />
+		</xsd:schema>
+	</types>
+
+	<!-- implementeer de rest van de wsdl hier -->
+	<message name="createRequest">
+		<part name="persoon" element="c:xmlPersoon" />
+	</message>
+	<message name="createResponse" />
+	<message name="createFault">
+		<part name="fault" element="c:xmlFault" />
+	</message>
+
+	<message name="readRequest">
+		<part name="naam" element="c:xmlNaam" />
+	</message>
+	<message name="readResponse">
+		<part name="return" element="c:xmlPersoon" />
+	</message>
+
+	<message name="deleteRequest">
+		<part name="naam" element="c:xmlNaamDelete" />
+	</message>
+	<message name="deleteResponse" />
+
+	<portType name="Naw">
+		<operation name="create">
+			<input message="tns:createRequest" />
+			<output message="tns:createResponse" />
+			<fault message="tns:createFault" name="createFault" />
+		</operation>
+		<operation name="read">
+			<input message="tns:readRequest" />
+			<output message="tns:readResponse" />
+		</operation>
+		<operation name="delete">
+			<input message="tns:deleteRequest" />
+			<output message="tns:deleteResponse" />
+		</operation>
+	</portType>
+
+	<binding name="NawPortBinding" type="tns:Naw">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <operation name="create">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="createFault">
+            	<soap:fault name="createFault" use="literal" />
+            </fault>
+        </operation>
+        <operation name="read">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="delete">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+
+	<!-- deze krijg je gratis -->
+	<service name="NawService">
+		<port name="NawPort" binding="tns:NawPortBinding">
+			<soap:address location="REPLACE_WITH_ACTUAL_URL" />
+		</port>
+	</service>
+</definitions>
+

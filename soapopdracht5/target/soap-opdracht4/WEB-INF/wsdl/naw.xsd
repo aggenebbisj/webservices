@@ -1,0 +1,54 @@
+<schema version="1.0" 
+	targetNamespace="http://soap.wscursus.jtechnologies.ordina.nl/"
+	xmlns="http://www.w3.org/2001/XMLSchema" 
+	xmlns:naw="http://soap.wscursus.jtechnologies.ordina.nl/"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	jaxb:version="2.0">
+	
+	<!-- <annotation>
+		<appinfo>
+			<jaxb:globalBindings>
+				<jaxb:javaType name="java.util.Calendar" xmlType="date"
+					parseMethod="javax.xml.bind.DatatypeConverter.parseDateTime"
+					printMethod="javax.xml.bind.DatatypeConverter.printDateTime" />
+			</jaxb:globalBindings>
+		</appinfo>
+	</annotation> -->
+
+	<!-- Types -->
+	<complexType name="xmlNaam">
+		<sequence>
+			<element name="voornaam" type="string" />
+			<element name="achternaam" type="string" />
+		</sequence>
+	</complexType>
+
+	<complexType name="xmlAdres">
+		<sequence>
+			<element name="straat" type="string" />
+			<element name="woonplaats" type="string" />
+			<element name="postcode" type="string" minOccurs="0" />
+		</sequence>
+	</complexType>
+
+	<complexType name="xmlPersoon">
+		<sequence>
+			<element name="naam" type="naw:xmlNaam" minOccurs="0" />
+			<element name="geboortedatum" type="date" minOccurs="0" />
+			<element name="adres" type="naw:xmlAdres" minOccurs="0" />
+		</sequence>
+	</complexType>
+
+	<complexType name="xmlFault">
+		<sequence>
+			<element name="message" type="string" />
+		</sequence>
+	</complexType>
+
+	<!-- Elements -->
+	<element name="xmlPersoon" type="naw:xmlPersoon" />
+	<element name="xmlNaam" type="naw:xmlNaam" />
+	<element name="xmlNaamDelete" type="naw:xmlNaam" />
+	<element name="xmlFault" type="naw:xmlFault" />
+
+</schema>

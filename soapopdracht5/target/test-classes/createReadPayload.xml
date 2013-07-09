@@ -1,0 +1,12 @@
+<ns2:xmlPersoon xmlns:ns2="http://soap.wscursus.jtechnologies.ordina.nl/">
+	<naam>
+		<voornaam>Create</voornaam>
+		<achternaam>Read</achternaam>
+	</naam>
+	<geboortedatum>1970-01-01</geboortedatum>
+	<adres>
+		<straat>CreateRead 1</straat>
+		<woonplaats>ReadCreate</woonplaats>
+		<postcode>0001CR</postcode>
+	</adres>
+</ns2:xmlPersoon>
